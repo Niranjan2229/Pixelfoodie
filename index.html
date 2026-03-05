@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelFoodie | Premium Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Placeholder for icons, will function if user has kit, otherwise we can use SVG or basic text/emoji fallback if needed, but for now assuming standard dev env or will fallback gracefully visually -->
+    <!-- Using inline SVGs for icons to avoid dependency issues if fontawesome fails -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">PIXELFOODIE</a>
+                <div class="nav-links">
+                    <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="recipes.html"><i class="fas fa-utensils"></i> Recipes</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn"><i class="fas fa-fire"></i> Popular <i
+                                class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content" id="popular-dropdown">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                    </div>
+                    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                        <!-- Moon Icon (Visible in Dark Mode) -->
+                        <i class="fas fa-moon icon-moon"></i>
+                        <!-- Sun Icon (Visible in Light Mode) -->
+                        <i class="fas fa-sun icon-sun"></i>
+                    </button>
+                </div>
+                <!-- Optional: Theme Toggle could go here -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container" style="display:flex; width:100%; align-items:center;">
+                <div class="hero-content">
+                    <span class="hero-tag">THE GOLD STANDARD RECIPES</span>
+                    <h1>Taste the Magic of <br><span>Pixel Perfect</span> Food</h1>
+                    <p>Master the art of the professional kitchen. Discover authentic restaurant secrets and
+                        time-honored recipes delivered to your table.</p>
+                    <a href="#recipes" class="btn btn-primary">Explore Recipes</a>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img-inner">
+                        <!-- Placeholder until image generation works. Using a solid color block with text for now if image missing -->
+                        <img src="assets/pixel_foodie_hero.jpg" alt="PixelFoodie Hero Logo"
+                            onerror="this.src='https://placehold.co/600x600/1E1E1E/FFF?text=PixelFoodie+Hero'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes" class="recipes-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>Featured Recipes</h2>
+                        <p>Hand-picked recipes just for you</p>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search recipes...">
+                        <button id="voiceSearchBtn" class="btn-icon" aria-label="Voice Search"
+                            style="margin-right: 5px;">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <span style="font-size: 1.2rem; cursor: pointer;">🔍</span>
+                    </div>
+                </div>
+
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PixelFoodie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
