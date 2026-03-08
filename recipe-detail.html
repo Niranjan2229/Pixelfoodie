@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Copyright & Ownership Meta Tags -->
+    <meta name="author" content="Niranjan N J">
+    <meta name="owner" content="Niranjan N J">
+    <meta name="copyright" content="© 2025 PixelFoodie — Niranjan N J. All Rights Reserved.">
+    <meta name="robots" content="index, follow">
 </head>
 
 <body>
@@ -73,10 +78,24 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 PixelFoodie. All rights reserved.</p>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="footer-logo">PIXELFOODIE</span>
+                    <p class="footer-tagline">Master the art of the professional kitchen.</p>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; <span id="footer-year"></span> <strong>PixelFoodie</strong> &mdash; Created &amp; Owned by
+                        <strong>Niranjan N J</strong></p>
+                    <p class="footer-legal">All content, design, code &amp; assets are the exclusive property of
+                        Niranjan N J.<br>Unauthorized copying, redistribution or use is strictly prohibited.</p>
+                    <p class="footer-rights"><i class="fas fa-shield-alt"></i> All Rights Reserved &nbsp;|&nbsp; <i
+                            class="fas fa-lock"></i> Proprietary &amp; Confidential</p>
+                </div>
+            </div>
         </div>
+        <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
     </footer>
 
     <script src="script.js"></script>
