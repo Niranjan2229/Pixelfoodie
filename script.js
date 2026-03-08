@@ -2330,7 +2330,7 @@ function renderRecipes(filter = "") {
         const card = document.createElement('div');
         card.className = 'recipe-card';
         // Add click listener to navigate to detail page
-        card.onclick = () => window.location.href = `recipe-detail?id=${recipe.id}`;
+        card.onclick = () => window.location.href = `recipe-detail.html?id=${recipe.id}`;
 
         const imgOnError = "this.src='https://placehold.co/400x300/1E1E1E/FFF?text=PixelFoodie'";
 
