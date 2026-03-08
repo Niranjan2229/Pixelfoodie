@@ -13,19 +13,31 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
         :root {
-            --primary: #2B6CB0; /* blue */
-            --secondary: #4A5568; /* slate */
-            --accent: #38A169; /* green */
-            --dark-bg: #F7FAFC; /* page background */
-            --card-bg: #FFFFFF; /* card / table background */
-            --border-color: #E2E8F0; /* light border */
-            --text-main: #1A202C; /* primary text */
-            --text-secondary: #4A5568; /* muted text */
+            --primary: #2B6CB0;
+            /* blue */
+            --secondary: #4A5568;
+            /* slate */
+            --accent: #38A169;
+            /* green */
+            --dark-bg: #F7FAFC;
+            /* page background */
+            --card-bg: #FFFFFF;
+            /* card / table background */
+            --border-color: #E2E8F0;
+            /* light border */
+            --text-main: #1A202C;
+            /* primary text */
+            --text-secondary: #4A5568;
+            /* muted text */
             --font-heading: 'Inter', sans-serif;
             --font-body: 'Inter', sans-serif;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             background-color: var(--dark-bg);
@@ -37,7 +49,7 @@
             overflow-x: hidden;
         }
 
-        h1 { 
+        h1 {
             font-family: var(--font-heading);
             color: var(--text-main);
             margin-bottom: 1.5rem;
@@ -54,7 +66,12 @@
             margin-bottom: 0.75rem;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
 
         table {
             width: 100%;
@@ -67,7 +84,13 @@
             margin-bottom: 2.5rem;
         }
 
-        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); font-size: 0.95rem; }
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
 
         th {
             background: #F1F5F9;
@@ -79,15 +102,35 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        tr:hover { background: #FAFBFC; transition: background 0.15s ease; }
+        tr:hover {
+            background: #FAFBFC;
+            transition: background 0.15s ease;
+        }
 
-        td { color: var(--text-secondary); }
+        td {
+            color: var(--text-secondary);
+        }
 
-        .tag { padding: 6px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+        .tag {
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
 
-        .tag-local { background: rgba(56,161,105,0.08); color: var(--accent); border: 1px solid rgba(56,161,105,0.12); }
+        .tag-local {
+            background: rgba(56, 161, 105, 0.08);
+            color: var(--accent);
+            border: 1px solid rgba(56, 161, 105, 0.12);
+        }
 
-        .tag-file { background: rgba(43,108,176,0.06); color: var(--primary); border: 1px solid rgba(43,108,176,0.08); }
+        .tag-file {
+            background: rgba(43, 108, 176, 0.06);
+            color: var(--primary);
+            border: 1px solid rgba(43, 108, 176, 0.08);
+        }
 
         .btn-logout {
             float: right;
@@ -103,7 +146,11 @@
             text-transform: none;
         }
 
-        .btn-logout:hover { background: #F1F5F9; color: var(--text-main); transform: translateY(-1px); }
+        .btn-logout:hover {
+            background: #F1F5F9;
+            color: var(--text-main);
+            transform: translateY(-1px);
+        }
 
         .btn-delete {
             padding: 6px 10px;
@@ -117,9 +164,17 @@
             font-weight: 600;
         }
 
-        .btn-delete:hover:not(:disabled) { background: #FFF1F1; box-shadow: 0 6px 14px rgba(199, 54, 54, 0.06); }
+        .btn-delete:hover:not(:disabled) {
+            background: #FFF1F1;
+            box-shadow: 0 6px 14px rgba(199, 54, 54, 0.06);
+        }
 
-        .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
 
         .chart-container {
             background: var(--card-bg);
@@ -131,9 +186,20 @@
             overflow: hidden;
         }
 
-        .chart-header { color: var(--text-secondary); font-family: var(--font-heading); margin-bottom: 0.8rem; font-size: 1.05rem; font-weight: 700; }
+        .chart-header {
+            color: var(--text-secondary);
+            font-family: var(--font-heading);
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
 
-        hr { border: none; height: 1px; background: var(--border-color); margin: 2rem 0; }
+        hr {
+            border: none;
+            height: 1px;
+            background: var(--border-color);
+            margin: 2rem 0;
+        }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -186,7 +252,8 @@
 
         <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0;">
 
-        <h2 style="font-family: var(--font-heading); color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">Downloaded Recipes by User</h2>
+        <h2 style="font-family: var(--font-heading); color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">
+            Downloaded Recipes by User</h2>
 
         <table>
             <thead>
@@ -320,31 +387,31 @@
 
             // Render Pie Chart
             renderPieChart();
-            
+
             // Render Downloads Table
             renderDownloadsTable();
         }
-        
+
         // 3b. Render Downloads Table
         function renderDownloadsTable() {
             const downloadsTableBody = document.getElementById('downloadsTable');
             if (!downloadsTableBody) return; // Guard clause
-            
+
             downloadsTableBody.innerHTML = '';
             let downloadCount = 0;
-            
+
             // Iterate through all users to find their downloads
             allUsers.forEach(user => {
                 const downloadsKey = 'pixelFoodie_downloads_' + user.email;
                 const downloads = JSON.parse(localStorage.getItem(downloadsKey) || '[]');
-                
+
                 downloads.forEach(download => {
                     downloadCount++;
                     const row = document.createElement('tr');
-                    
+
                     const downloadDate = new Date(download.downloadDate);
                     const formattedDate = downloadDate.toLocaleString();
-                    
+
                     row.innerHTML = `
                         <td>${downloadCount}</td>
                         <td>${user.email}</td>
@@ -355,7 +422,7 @@
                     downloadsTableBody.appendChild(row);
                 });
             });
-            
+
             // If no downloads, show message
             if (downloadCount === 0) {
                 const row = document.createElement('tr');
@@ -404,7 +471,7 @@
                     },
                     plugins: {
                         legend: {
-                            labels: { color: '#fff' }
+                            labels: { color: '#4A5568', font: { size: 12 } }
                         }
                     }
                 }
@@ -473,7 +540,24 @@
                     plugins: {
                         legend: {
                             position: 'right',
-                            labels: { color: '#fff' }
+                            labels: {
+                                color: '#1A202C',
+                                font: { size: 11.5, family: 'Inter, sans-serif' },
+                                padding: 12,
+                                boxWidth: 14,
+                                boxHeight: 14,
+                                usePointStyle: true,
+                                pointStyle: 'rectRounded'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    return ` ${label}: ${value} view${value !== 1 ? 's' : ''}`;
+                                }
+                            }
                         }
                     }
                 }
