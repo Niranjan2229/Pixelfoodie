@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, jsonify
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from flask import Flask, render_template, request, jsonify  # type: ignore
+import pandas as pd  # type: ignore
+from sklearn.feature_extraction.text import TfidfVectorizer  # type: ignore
+from sklearn.metrics.pairwise import cosine_similarity  # type: ignore
 import re
 
 app = Flask(__name__)
@@ -84,7 +84,7 @@ def category_results_page():
 def forgot_password_page():
     return render_template('forgot-password.html')
 
-from flask import send_from_directory
+from flask import send_from_directory  # type: ignore
 @app.route('/data/<path:filename>')
 def serve_data(filename):
     return send_from_directory('data', filename)
@@ -130,7 +130,7 @@ def predict():
             })
             seen_recipes.add(recipe_name)
 
-    final_results = sorted(results, key=lambda x: x['match_val'], reverse=True)[:21]
+    final_results = sorted(results, key=lambda x: x['match_val'], reverse=True)[:21]  # type: ignore
     
     return jsonify(final_results)
 
