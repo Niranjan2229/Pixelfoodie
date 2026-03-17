@@ -885,13 +885,13 @@
     <script type="module">
         // ── PASTE YOUR FIREBASE CONFIG HERE ──────────────────
         const firebaseConfig = {
-            apiKey: "AIzaSyDPCpagE1Yc8IsIIHOGsOhkAyiwEVylZwg",
-            authDomain: "pixelfoodie-88ce8.firebaseapp.com",
-            projectId: "pixelfoodie-88ce8",
-            storageBucket: "pixelfoodie-88ce8.firebasestorage.app",
-            messagingSenderId: "373769659556",
-            appId: "1:373769659556:web:43f48bee51eb1c2e3cf231",
-            measurementId: "G-X2QE8R1E85"
+            apiKey: "{{ firebase_config.apiKey }}",
+            authDomain: "{{ firebase_config.authDomain }}",
+            projectId: "{{ firebase_config.projectId }}",
+            storageBucket: "{{ firebase_config.storageBucket }}",
+            messagingSenderId: "{{ firebase_config.messagingSenderId }}",
+            appId: "{{ firebase_config.appId }}",
+            measurementId: "{{ firebase_config.measurementId }}"
         };
         // ─────────────────────────────────────────────────────
 

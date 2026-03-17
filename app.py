@@ -3,6 +3,10 @@ import pandas as pd  # type: ignore
 from sklearn.feature_extraction.text import TfidfVectorizer  # type: ignore
 from sklearn.metrics.pairwise import cosine_similarity  # type: ignore
 import re
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -26,7 +30,16 @@ matrix = vectorizer.fit_transform(df['Clean_Ingredients'])
 
 @app.route('/')
 def home():
-    return render_template('login.html')
+    firebase_config = {
+        'apiKey': os.getenv('FIREBASE_API_KEY', ''),
+        'authDomain': os.getenv('FIREBASE_AUTH_DOMAIN', ''),
+        'projectId': os.getenv('FIREBASE_PROJECT_ID', ''),
+        'storageBucket': os.getenv('FIREBASE_STORAGE_BUCKET', ''),
+        'messagingSenderId': os.getenv('FIREBASE_MESSAGING_SENDER_ID', ''),
+        'appId': os.getenv('FIREBASE_APP_ID', ''),
+        'measurementId': os.getenv('FIREBASE_MEASUREMENT_ID', '')
+    }
+    return render_template('login.html', firebase_config=firebase_config)
 
 @app.route('/home')
 def index_page():
@@ -35,7 +48,16 @@ def index_page():
 @app.route('/login')
 @app.route('/login.html')
 def login_page():
-    return render_template('login.html')
+    firebase_config = {
+        'apiKey': os.getenv('FIREBASE_API_KEY', ''),
+        'authDomain': os.getenv('FIREBASE_AUTH_DOMAIN', ''),
+        'projectId': os.getenv('FIREBASE_PROJECT_ID', ''),
+        'storageBucket': os.getenv('FIREBASE_STORAGE_BUCKET', ''),
+        'messagingSenderId': os.getenv('FIREBASE_MESSAGING_SENDER_ID', ''),
+        'appId': os.getenv('FIREBASE_APP_ID', ''),
+        'measurementId': os.getenv('FIREBASE_MEASUREMENT_ID', '')
+    }
+    return render_template('login.html', firebase_config=firebase_config)
 
 @app.route('/recipe-detail.html')
 def recipe_detail():
